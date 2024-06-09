@@ -97,9 +97,6 @@ p {
     margin-bottom: 40vh;
 }
 
-.coming-soon-image {
-    width: 100%;
-}
 
 .reel {
     background-image: url(/content/placeholder.jpg);
@@ -123,6 +120,16 @@ p {
 .selfie {
     border: 1px solid white;
 }
+
+.video-desc{
+    width: 50vw;    
+}
+
+.film-stills{
+    min-width: 100%;
+    min-height: 200px;
+}
+
 
 @media (max-width:991px) {
 
