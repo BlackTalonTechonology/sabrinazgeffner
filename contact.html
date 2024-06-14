@@ -48,25 +48,27 @@
     <div class="container">
         <form action="https://api.web3forms.com/submit" method="POST">
             <!-- Replace with your Access Key -->
-            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+            <input type="hidden" name="access_key" value="42e25166-ba4d-4de9-ac2f-1dccd491b545">
+            <input type="hidden" name="apikey" value="42e25166-ba4d-4de9-ac2f-1dccd491b545">
+            <input type="hidden" name="subject" value="New Submission from Web3Forms">
             <div class="row">
                 <div class="col-6 mb-3">
-                    <input type="text" id="first" class="form-control" placeholder="Enter your first name">
+                    <input type="text" id="first_name" name="first_name" class="form-control" placeholder="Enter your first name">
                 </div>
                 <div class="col-6 mb-3">
-                    <input type="text" id="last" class="form-control" placeholder="Enter your last name">
+                    <input type="text" id="last_name" name="last_name" class="form-control" placeholder="Enter your last name">
                 </div>
                 <div class="col-6 mb-3">
-                    <input type="text" id="phone" class="form-control" placeholder="Phone">
+                    <input type="text" id="phone" name="phone" class="form-control" placeholder="Phone">
                 </div>
                 <div class="col-6 mb-3">
-                    <input type="text" id="email" class="form-control" placeholder="Email Address">
+                    <input type="text" id="email" name="email" class="form-control" placeholder="Email Address">
                 </div>
                 <div class="col-12 mb-3">
-                    <input type="text" id="subject" class="form-control" placeholder="Subject">
+                    <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject">
                 </div>
                 <div class="col-12 mb-3">
-                    <textarea rows="8" wrap="hard" id="body" class="form-control" placeholder="Add content"></textarea>
+                    <textarea rows="8" wrap="hard" id="message" name="message" class="form-control" placeholder="Add content"></textarea>
                 </div>
                 <!-- Honeypot Spam Protection -->
                 <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
@@ -135,7 +137,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
-
+    <script>
+        window.onload = function () {
+            // Reset the form fields when the page loads
+            document.getElementById("form").reset();
+        };
+    </script>
 </body>
 
 </html>
