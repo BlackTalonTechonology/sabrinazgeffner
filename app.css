@@ -237,5 +237,11 @@ p {
         font-variation-settings:
             "wdth" 100;
     }
+    .dead-weight-poster{
+        height: 60vh;
+    }
+    .dead-weight-text{
+        text-align: center;
+    }
 
 }
